@@ -2,12 +2,23 @@
 *
 * CSCI 305 - ML Programming Lab
 *
-* <firstname> <lastname>
-* <email-address>
+* Zachariah Fahsi
+* zachariah.fahsi@student.montana.edu
 *
 ***************************************************************)
 
 (* Define your data type and functions here *)
+fun f [] = [] (* a *)
+   | f (x::xs) = (x + 1) :: (f xs); (* b *)
+
+f [3, 1, 4, 1, 5, 9]; 
+
+datatype 'element set = Empty | Set of 'element * 'element set;
+
+fun isMember e set = true; (* complete this function definition *)
+
+(*fun list2Set [] = set
+	| ;*)
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""

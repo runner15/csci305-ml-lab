@@ -1,17 +1,17 @@
-<firstname> <lastname>
+Zachariah Fahsi
 CSCI 305
 Spring 2018
 Lab Questions
 =======================
-1.
+1. val it = [4,2,5,2,6,10] : int list
 
-2.
+2. Takes each int and adds 1 to it
 
-3.
+3. Function “f” will take a list and return a list, [] is an empty list
 
-4.
+4. The function will take each int, add 1 to it, store it in the variable xs, and then return xs
 
-5.
+5. 
 
 6.
 
