@@ -28,7 +28,7 @@ fun duplication [] = []
     | duplication (x::l) = x::duplication(delete(x,l)); 
 
 fun list2Set [] = Empty
-	| list2Set (x::xs) = `
+	| list2Set (x::xs) = 
 		let
 			val s = list2Set(xs);
 		in
@@ -64,7 +64,7 @@ list2Set [6, 2, 2];
 list2Set ["x", "y", "z", "x"];
 
 (* Question 1 *)
-f [3, 1, 4, 1, 5, 9]
+f [3, 1, 4, 1, 5, 9];
 
 (* Question 5 *)
 val quest5 = isMember "one" (list2Set ["1", "2", "3", "4"]);
