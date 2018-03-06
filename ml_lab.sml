@@ -15,10 +15,26 @@ f [3, 1, 4, 1, 5, 9];
 
 datatype 'element set = Empty | Set of 'element * 'element set;
 
-fun isMember e set = true; (* complete this function definition *)
+fun isMember e set : bool =
+	case set of 
+		Set(a,b) =>
+			if e=a then true
+			else isMember e b |
+		Empty => false;
 
-(*fun list2Set [] = set
-	| ;*)
+fun delete(x,[]) = []
+    | delete(x,y::l) = if x=y then delete(x,l) else y::delete(x,l);
+fun duplication [] = []
+    | duplication (x::l) = x::duplication(delete(x,l)); 
+
+fun list2Set [] = Empty
+	| list2Set (x::xs) = `
+		let
+			val s = list2Set(xs);
+		in
+			if isMember x s then list2Set(duplication(x::xs))
+			else Set(x,s)
+		end;
 
 (* Simple function to stringify the contents of a Set of characters *)
 fun stringifyCharSet Empty = ""
